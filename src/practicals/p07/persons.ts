@@ -4,7 +4,15 @@ interface Person {
   age?: number;
 }
 
-function sortPersons(persons: Person[]): Person[] {}
+function sortPersons(persons: Person[]): Person[] {
+  let result: Person[] = [];
+  const sort = persons.filter((person) => person.firstName !== '' && person.lastName !== '' && person.age !== undefined && person.age > 0 );
+  console.log(sort)
+  // console.log(persons.length);
+
+  return result
+
+}
 
 
 const persons: Person[] = [
@@ -16,3 +24,5 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
+
+sortPersons(persons);
