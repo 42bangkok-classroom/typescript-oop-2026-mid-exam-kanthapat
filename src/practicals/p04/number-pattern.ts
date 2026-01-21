@@ -13,7 +13,7 @@ if(args) {
                 if(j <= i){
                     message = message + j;
                 } else {
-                    message = message + ' ';
+                    message = message + " ";
                 }
             }
     
